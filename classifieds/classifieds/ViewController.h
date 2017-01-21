@@ -1,7 +1,4 @@
 //
-//  ViewController.h
-//  classifieds
-//
 //  Created by Stefan Kramreither on 2017-01-21.
 //  Copyright © 2017 Stefan Kramreither. All rights reserved.
 //
@@ -10,6 +7,4 @@
 
 @interface ViewController : UIViewController
 
-
 @end
-
