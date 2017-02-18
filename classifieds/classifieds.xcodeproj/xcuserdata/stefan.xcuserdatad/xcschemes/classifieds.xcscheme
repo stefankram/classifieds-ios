@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F82EDF7B1E33261900D18404"
+               BlueprintIdentifier = "F8AF783E1E58CADB005E7690"
                BuildableName = "classifieds.app"
                BlueprintName = "classifieds"
                ReferencedContainer = "container:classifieds.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F82EDF7B1E33261900D18404"
+            BlueprintIdentifier = "F8AF783E1E58CADB005E7690"
             BuildableName = "classifieds.app"
             BlueprintName = "classifieds"
             ReferencedContainer = "container:classifieds.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F82EDF7B1E33261900D18404"
+            BlueprintIdentifier = "F8AF783E1E58CADB005E7690"
             BuildableName = "classifieds.app"
             BlueprintName = "classifieds"
             ReferencedContainer = "container:classifieds.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F82EDF7B1E33261900D18404"
+            BlueprintIdentifier = "F8AF783E1E58CADB005E7690"
             BuildableName = "classifieds.app"
             BlueprintName = "classifieds"
             ReferencedContainer = "container:classifieds.xcodeproj">
