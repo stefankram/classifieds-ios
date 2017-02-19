@@ -5,17 +5,16 @@
 //
 // Description
 // -----------
-// Responds to app events
+// The settings menu so that a user can modify their account
 //
 // Associated Files
 // ----------------
-// AppDelegate.m
+// AccountViewController.m
+// AccountViewController.xib
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface AccountViewController : UIViewController
 
 @end

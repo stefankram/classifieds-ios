@@ -5,17 +5,16 @@
 //
 // Description
 // -----------
-// Responds to app events
+// The list of orders that a buyer has purchased
 //
 // Associated Files
 // ----------------
-// AppDelegate.m
+// OrderViewController.m
+// OrderViewController.xib
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface OrderViewController : UIViewController
 
 @end

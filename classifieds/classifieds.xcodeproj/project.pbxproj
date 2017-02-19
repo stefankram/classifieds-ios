@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		F8AF78441E58CADB005E7690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78431E58CADB005E7690 /* main.m */; };
 		F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78461E58CADB005E7690 /* AppDelegate.m */; };
-		F8AF784A1E58CADB005E7690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78491E58CADB005E7690 /* ViewController.m */; };
-		F8AF784D1E58CADB005E7690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF784B1E58CADB005E7690 /* Main.storyboard */; };
 		F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF784E1E58CADB005E7690 /* Assets.xcassets */; };
 		F8AF78521E58CADB005E7690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */; };
+		F8AF78681E58ED74005E7690 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78661E58ED74005E7690 /* SearchViewController.m */; };
+		F8AF78691E58ED74005E7690 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78671E58ED74005E7690 /* SearchViewController.xib */; };
+		F8AF786D1E58F049005E7690 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF786B1E58F049005E7690 /* OrderViewController.m */; };
+		F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF786C1E58F049005E7690 /* OrderViewController.xib */; };
+		F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78701E58F056005E7690 /* AccountViewController.m */; };
+		F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78711E58F056005E7690 /* AccountViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,18 @@
 		F8AF78431E58CADB005E7690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8AF78451E58CADB005E7690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8AF78461E58CADB005E7690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8AF78481E58CADB005E7690 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8AF78491E58CADB005E7690 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F8AF784C1E58CADB005E7690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8AF784E1E58CADB005E7690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AF78511E58CADB005E7690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8AF78531E58CADB005E7690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8AF78651E58ED74005E7690 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F8AF78661E58ED74005E7690 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F8AF78671E58ED74005E7690 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		F8AF786A1E58F049005E7690 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		F8AF786B1E58F049005E7690 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		F8AF786C1E58F049005E7690 /* OrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
+		F8AF786F1E58F056005E7690 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		F8AF78701E58F056005E7690 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		F8AF78711E58F056005E7690 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CACF6A68B8F0C009F27A6384 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CACF6B521BF626BA5C2223CE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F8AF78651E58ED74005E7690 /* SearchViewController.h */,
+				F8AF78661E58ED74005E7690 /* SearchViewController.m */,
+				F8AF78671E58ED74005E7690 /* SearchViewController.xib */,
+				F8AF786A1E58F049005E7690 /* OrderViewController.h */,
+				F8AF786B1E58F049005E7690 /* OrderViewController.m */,
+				F8AF786C1E58F049005E7690 /* OrderViewController.xib */,
+				F8AF786F1E58F056005E7690 /* AccountViewController.h */,
+				F8AF78701E58F056005E7690 /* AccountViewController.m */,
+				F8AF78711E58F056005E7690 /* AccountViewController.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		F8AF78361E58CADB005E7690 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +93,12 @@
 			children = (
 				F8AF78451E58CADB005E7690 /* AppDelegate.h */,
 				F8AF78461E58CADB005E7690 /* AppDelegate.m */,
-				F8AF78481E58CADB005E7690 /* ViewController.h */,
-				F8AF78491E58CADB005E7690 /* ViewController.m */,
-				F8AF784B1E58CADB005E7690 /* Main.storyboard */,
 				F8AF784E1E58CADB005E7690 /* Assets.xcassets */,
 				F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */,
 				F8AF78531E58CADB005E7690 /* Info.plist */,
 				F8AF78421E58CADB005E7690 /* Supporting Files */,
+				CACF6A68B8F0C009F27A6384 /* models */,
+				CACF6B521BF626BA5C2223CE /* views */,
 			);
 			path = classifieds;
 			sourceTree = "<group>";
@@ -110,6 +142,7 @@
 				TargetAttributes = {
 					F8AF783E1E58CADB005E7690 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = C9QPAKAKR6;
 					};
 				};
 			};
@@ -138,7 +171,9 @@
 			files = (
 				F8AF78521E58CADB005E7690 /* LaunchScreen.storyboard in Resources */,
 				F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */,
-				F8AF784D1E58CADB005E7690 /* Main.storyboard in Resources */,
+				F8AF78691E58ED74005E7690 /* SearchViewController.xib in Resources */,
+				F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */,
+				F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,23 +184,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF784A1E58CADB005E7690 /* ViewController.m in Sources */,
 				F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */,
+				F8AF78681E58ED74005E7690 /* SearchViewController.m in Sources */,
 				F8AF78441E58CADB005E7690 /* main.m in Sources */,
+				F8AF786D1E58F049005E7690 /* OrderViewController.m in Sources */,
+				F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F8AF784B1E58CADB005E7690 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8AF784C1E58CADB005E7690 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,10 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = classifieds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefankram.classifieds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = classifieds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefankram.classifieds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -300,6 +335,7 @@
 				F8AF78581E58CADC005E7690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

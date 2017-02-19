@@ -5,17 +5,16 @@
 //
 // Description
 // -----------
-// Responds to app events
+// Performs a search for a product or service
 //
 // Associated Files
 // ----------------
-// AppDelegate.m
+// SearchViewController.m
+// SearchViewController.xib
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface SearchViewController : UIViewController
 
 @end
