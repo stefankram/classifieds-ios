@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CACF64426720611664F28209 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF630C61D6B815A30EB199 /* Token.m */; };
+		CACF6EB698F5C47329D273FC /* Json.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF67FE235854A42AE4473A /* Json.m */; };
 		F8AF78441E58CADB005E7690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78431E58CADB005E7690 /* main.m */; };
 		F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78461E58CADB005E7690 /* AppDelegate.m */; };
 		F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF784E1E58CADB005E7690 /* Assets.xcassets */; };
@@ -17,9 +19,26 @@
 		F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF786C1E58F049005E7690 /* OrderViewController.xib */; };
 		F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78701E58F056005E7690 /* AccountViewController.m */; };
 		F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78711E58F056005E7690 /* AccountViewController.xib */; };
+		F8AF787C1E59C9E7005E7690 /* SearchPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */; };
+		F8AF78811E59CA09005E7690 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */; };
+		F8AF78821E59CA09005E7690 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */; };
+		F8AF78861E59CA1F005E7690 /* MessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78841E59CA1F005E7690 /* MessagingViewController.m */; };
+		F8AF78871E59CA1F005E7690 /* MessagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */; };
+		F8AF788A1E59E51B005E7690 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78891E59E51B005E7690 /* SearchModel.m */; };
+		F8AF78911E59E8ED005E7690 /* SearchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78901E59E8ED005E7690 /* SearchStore.m */; };
+		F8AF78941E59F3E2005E7690 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78931E59F3E2005E7690 /* ItemModel.m */; };
+		F8AF78971E59F3EC005E7690 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78961E59F3EC005E7690 /* ItemStore.m */; };
+		F8AF789B1E5B2F4D005E7690 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78991E5B2F4D005E7690 /* LoginViewController.m */; };
+		F8AF789C1E5B2F4D005E7690 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */; };
+		F8AF78A01E5B2F6E005E7690 /* LoginCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */; };
+		F8AF78A11E5B2F6E005E7690 /* LoginCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CACF630C61D6B815A30EB199 /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Token.m; sourceTree = "<group>"; };
+		CACF63123CC6D97180CC1EE8 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
+		CACF6465D944918D7D0F1FDA /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json.h; sourceTree = "<group>"; };
+		CACF67FE235854A42AE4473A /* Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Json.m; sourceTree = "<group>"; };
 		F8AF783F1E58CADB005E7690 /* classifieds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classifieds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF78431E58CADB005E7690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8AF78451E58CADB005E7690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +55,28 @@
 		F8AF786F1E58F056005E7690 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		F8AF78701E58F056005E7690 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		F8AF78711E58F056005E7690 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		F8AF78791E59C9E7005E7690 /* SearchPastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPastViewController.h; sourceTree = "<group>"; };
+		F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPastViewController.m; sourceTree = "<group>"; };
+		F8AF787E1E59CA09005E7690 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
+		F8AF78831E59CA1F005E7690 /* MessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingViewController.h; sourceTree = "<group>"; };
+		F8AF78841E59CA1F005E7690 /* MessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingViewController.m; sourceTree = "<group>"; };
+		F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagingViewController.xib; sourceTree = "<group>"; };
+		F8AF78881E59E51B005E7690 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		F8AF78891E59E51B005E7690 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		F8AF788F1E59E8ED005E7690 /* SearchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchStore.h; sourceTree = "<group>"; };
+		F8AF78901E59E8ED005E7690 /* SearchStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchStore.m; sourceTree = "<group>"; };
+		F8AF78921E59F3E2005E7690 /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		F8AF78931E59F3E2005E7690 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		F8AF78951E59F3EC005E7690 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
+		F8AF78961E59F3EC005E7690 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
+		F8AF78981E5B2F4D005E7690 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F8AF78991E5B2F4D005E7690 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F8AF789D1E5B2F6E005E7690 /* LoginCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCreateViewController.h; sourceTree = "<group>"; };
+		F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCreateViewController.m; sourceTree = "<group>"; };
+		F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCreateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +93,10 @@
 		CACF6A68B8F0C009F27A6384 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				F8AF78881E59E51B005E7690 /* SearchModel.h */,
+				F8AF78891E59E51B005E7690 /* SearchModel.m */,
+				F8AF78921E59F3E2005E7690 /* ItemModel.h */,
+				F8AF78931E59F3E2005E7690 /* ItemModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -62,14 +107,39 @@
 				F8AF78651E58ED74005E7690 /* SearchViewController.h */,
 				F8AF78661E58ED74005E7690 /* SearchViewController.m */,
 				F8AF78671E58ED74005E7690 /* SearchViewController.xib */,
+				F8AF78791E59C9E7005E7690 /* SearchPastViewController.h */,
+				F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */,
+				F8AF787E1E59CA09005E7690 /* SearchResultViewController.h */,
+				F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */,
+				F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */,
 				F8AF786A1E58F049005E7690 /* OrderViewController.h */,
 				F8AF786B1E58F049005E7690 /* OrderViewController.m */,
 				F8AF786C1E58F049005E7690 /* OrderViewController.xib */,
 				F8AF786F1E58F056005E7690 /* AccountViewController.h */,
 				F8AF78701E58F056005E7690 /* AccountViewController.m */,
 				F8AF78711E58F056005E7690 /* AccountViewController.xib */,
+				F8AF78831E59CA1F005E7690 /* MessagingViewController.h */,
+				F8AF78841E59CA1F005E7690 /* MessagingViewController.m */,
+				F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */,
+				F8AF78981E5B2F4D005E7690 /* LoginViewController.h */,
+				F8AF78991E5B2F4D005E7690 /* LoginViewController.m */,
+				F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */,
+				F8AF789D1E5B2F6E005E7690 /* LoginCreateViewController.h */,
+				F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */,
+				F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		CACF6FB0254C0DBEEB38204A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CACF67FE235854A42AE4473A /* Json.m */,
+				CACF6465D944918D7D0F1FDA /* Json.h */,
+				CACF630C61D6B815A30EB199 /* Token.m */,
+				CACF63123CC6D97180CC1EE8 /* Token.h */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		F8AF78361E58CADB005E7690 = {
@@ -94,11 +164,13 @@
 				F8AF78451E58CADB005E7690 /* AppDelegate.h */,
 				F8AF78461E58CADB005E7690 /* AppDelegate.m */,
 				F8AF784E1E58CADB005E7690 /* Assets.xcassets */,
-				F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */,
 				F8AF78531E58CADB005E7690 /* Info.plist */,
-				F8AF78421E58CADB005E7690 /* Supporting Files */,
+				F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */,
 				CACF6A68B8F0C009F27A6384 /* models */,
+				F8AF788E1E59E8D5005E7690 /* stores */,
+				F8AF78421E58CADB005E7690 /* Supporting Files */,
 				CACF6B521BF626BA5C2223CE /* views */,
+				CACF6FB0254C0DBEEB38204A /* util */,
 			);
 			path = classifieds;
 			sourceTree = "<group>";
@@ -109,6 +181,17 @@
 				F8AF78431E58CADB005E7690 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8AF788E1E59E8D5005E7690 /* stores */ = {
+			isa = PBXGroup;
+			children = (
+				F8AF788F1E59E8ED005E7690 /* SearchStore.h */,
+				F8AF78901E59E8ED005E7690 /* SearchStore.m */,
+				F8AF78951E59F3EC005E7690 /* ItemStore.h */,
+				F8AF78961E59F3EC005E7690 /* ItemStore.m */,
+			);
+			name = stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +252,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AF789C1E5B2F4D005E7690 /* LoginViewController.xib in Resources */,
 				F8AF78521E58CADB005E7690 /* LaunchScreen.storyboard in Resources */,
+				F8AF78871E59CA1F005E7690 /* MessagingViewController.xib in Resources */,
 				F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */,
+				F8AF78A11E5B2F6E005E7690 /* LoginCreateViewController.xib in Resources */,
 				F8AF78691E58ED74005E7690 /* SearchViewController.xib in Resources */,
 				F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */,
 				F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */,
+				F8AF78821E59CA09005E7690 /* SearchResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,11 +271,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AF787C1E59C9E7005E7690 /* SearchPastViewController.m in Sources */,
+				F8AF78861E59CA1F005E7690 /* MessagingViewController.m in Sources */,
+				F8AF78A01E5B2F6E005E7690 /* LoginCreateViewController.m in Sources */,
+				F8AF78971E59F3EC005E7690 /* ItemStore.m in Sources */,
 				F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */,
+				F8AF789B1E5B2F4D005E7690 /* LoginViewController.m in Sources */,
+				F8AF78941E59F3E2005E7690 /* ItemModel.m in Sources */,
 				F8AF78681E58ED74005E7690 /* SearchViewController.m in Sources */,
 				F8AF78441E58CADB005E7690 /* main.m in Sources */,
+				F8AF788A1E59E51B005E7690 /* SearchModel.m in Sources */,
+				F8AF78811E59CA09005E7690 /* SearchResultViewController.m in Sources */,
 				F8AF786D1E58F049005E7690 /* OrderViewController.m in Sources */,
 				F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */,
+				F8AF78911E59E8ED005E7690 /* SearchStore.m in Sources */,
+				CACF6EB698F5C47329D273FC /* Json.m in Sources */,
+				CACF64426720611664F28209 /* Token.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
