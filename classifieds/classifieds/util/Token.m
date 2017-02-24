@@ -50,4 +50,20 @@
     return request;
 }
 
++ (NSString *) getToken
+{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+}
+
++ (void) setToken:(NSString *) token
+{
+    [[NSUserDefaults standardUserDefaults] setValue:token
+                                             forKey:@"token"];
+}
+
++ (NSString *) getAuthHeader
+{
+    return [[NSString alloc] initWithFormat:@"JWT %@", [self getToken]];
+}
+
 @end

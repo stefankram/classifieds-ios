@@ -12,4 +12,10 @@
 
 + (NSURLRequest *) refreshToken:(NSString *) token;
 
++ (NSString *) getToken;
+
++ (void) setToken:(NSString *) token;
+
++ (NSString *) getAuthHeader;
+
 @end

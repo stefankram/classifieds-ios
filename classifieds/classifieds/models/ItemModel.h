@@ -10,13 +10,13 @@
 
 @interface ItemModel : NSObject
 
-@property (nonatomic) int itemId;
+@property (nonatomic) unsigned long itemId;
 @property (nonatomic) BOOL available;
 @property (nonatomic, copy) NSDate *createdAt;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *itemType;
 
-- (instancetype) initWithItemId:(int) itemId
+- (instancetype) initWithItemId:(unsigned long) itemId
                       available:(BOOL) available
                       createdAt:(NSDate *) createdAt
                            name:(NSString *) name

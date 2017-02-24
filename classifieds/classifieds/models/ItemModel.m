@@ -7,10 +7,11 @@
 //
 
 #import "ItemModel.h"
+#import "Json.h"
 
 @implementation ItemModel
 
-- (instancetype) initWithItemId:(int) itemId
+- (instancetype) initWithItemId:(unsigned long) itemId
                       available:(BOOL) available
                       createdAt:(NSDate *) createdAt
                            name:(NSString *) name
@@ -28,34 +29,30 @@
     return self;
 }
 
-- (instancetype) initWithJson:(NSData *) json
+
+- (instancetype) initWithJson:(NSData *) data
 {
-    if (self = [super init])
+    NSDictionary *json = [Json parseJsonObject:data];
+
+    if (json)
     {
-        NSError *jsonError = nil;
-
-        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:json
-                                                                 options:0
-                                                                   error:&jsonError];
-
-        if (!jsonError)
-        {
-            NSLog(@"%@", jsonDict);
-        }
-        else
-        {
-            return nil;
-        }
+        return [self initWithItemId:[json[@"id"] unsignedLongValue]
+                          available:[json[@"available"] boolValue]
+                          createdAt:json[@"created_at"]
+                               name:json[@"name"]
+                           itemType:json[@"item_type"]];
     }
-
-    return self;
+    else
+    {
+        return nil;
+    }
 }
 
 - (NSString *) description
 {
-    return [[NSString alloc] initWithFormat:@"%d, %d, %@, %@, %@",
+    return [[NSString alloc] initWithFormat:@"%lu, %@, %@, %@, %@",
                                             self.itemId,
-                                            self.available,
+                                            self.available ? @"YES" : @"NO",
                                             self.createdAt,
                                             self.name,
                                             self.itemType];

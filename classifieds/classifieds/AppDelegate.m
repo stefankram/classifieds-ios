@@ -33,7 +33,8 @@
 - (BOOL)          application:(UIApplication *) application
 didFinishLaunchingWithOptions:(NSDictionary *) launchOptions
 {
-    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
+    NSString *token = [Token getToken];
 
     if (token)
     {
@@ -67,8 +68,7 @@ didFinishLaunchingWithOptions:(NSDictionary *) launchOptions
             NSDictionary *json = [Json parseJsonObject:data];
             if (json)
             {
-                [[NSUserDefaults standardUserDefaults] setValue:json[@"token"]
-                                                         forKey:@"token"];
+                [Token setToken:json[@"token"]];
 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // Setup search controller

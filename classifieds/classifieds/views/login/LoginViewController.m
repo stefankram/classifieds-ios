@@ -21,9 +21,11 @@
 
 @implementation LoginViewController
 
-- (instancetype) initWithNibName:(NSString *) nibNameOrNil bundle:(NSBundle *) nibBundleOrNil
+- (instancetype) initWithNibName:(NSString *) nibNameOrNil
+                          bundle:(NSBundle *) nibBundleOrNil
 {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
+    if (self = [super initWithNibName:nibNameOrNil
+                               bundle:nibBundleOrNil])
     {
         self.navigationItem.title = @"Login to Classifieds";
         self.createView = [[LoginCreateViewController alloc] init];

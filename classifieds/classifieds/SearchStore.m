@@ -48,8 +48,6 @@ static SearchStore *store;
     {
         if (!store) store = [[SearchStore alloc] init];
 
-        ItemModel *item = [ItemStore findByName:itemName];
-
         // HTTP POST to create the search, return full object
 
 

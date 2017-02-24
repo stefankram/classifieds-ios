@@ -7,38 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CACF60554E940D97BC9DD7E9 /* LoginCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6484D2C99D97E8D1F932 /* LoginCreateViewController.m */; };
+		CACF617CF19077CFB34736D3 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF6E232ABE0C4B0674877D /* AccountViewController.xib */; };
+		CACF61A28C147362BD0EE57F /* BillingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6411BEF3C8EC3E76901B /* BillingModel.m */; };
+		CACF61CDBE9487145E9AA87C /* BuyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6176F661B11F96884B87 /* BuyerModel.m */; };
+		CACF632E88217320D03B4BCF /* LoginCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF6F2486DBFB1942FA4DB4 /* LoginCreateViewController.xib */; };
+		CACF6379D708CD9D30B368F4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6D0AA07F5744713D5241 /* SearchViewController.m */; };
+		CACF6396A407F1FD8CD943BF /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF69ECEA402CE0B2EFB67D /* Http.m */; };
+		CACF639B27BFF4E3BBF01C98 /* SearchPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF624AB488C745ED22FF81 /* SearchPastViewController.m */; };
+		CACF63C4E31A54508D807589 /* BillingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6809D266D949D1E2DDFF /* BillingStore.m */; };
+		CACF63E4B8F1146FC23F6631 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF69DBCF1C2B4FFF8D504E /* SearchViewController.xib */; };
 		CACF64426720611664F28209 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF630C61D6B815A30EB199 /* Token.m */; };
+		CACF645223529E2B03F9C30B /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF65318C24B144006201D3 /* SearchResultViewController.m */; };
+		CACF64AA0DCE523EE15F527D /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6905ABBEDAAE36A23B96 /* OrderViewController.m */; };
+		CACF64D05BFCF5B0D4E9E268 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF6DAA42E02757F2BA51DB /* OrderViewController.xib */; };
+		CACF65EB545659347F2E8C0E /* AddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF66CEF081993A0707F1C8 /* AddressStore.m */; };
+		CACF67E5307A64065B28B07D /* BuyerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF685481CA5955C806FB17 /* BuyerStore.m */; };
+		CACF689C31E6AC392F1EE9AC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6511DD0C6BD8BFADF5B0 /* LoginViewController.m */; };
+		CACF6924C0DE4B230E4D6B20 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF6FD6834960AFF7D03F27 /* LoginViewController.xib */; };
+		CACF699CD5C227E4029B1ED3 /* MessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6B6A5140D39A799E564D /* MessagingViewController.m */; };
+		CACF69D4FECD4671ADDDD483 /* MessagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF62BB99C95F0B7196EDD4 /* MessagingViewController.xib */; };
+		CACF6CB883EB3019FBBC49B4 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF6F2074BA82838A457A50 /* AccountViewController.m */; };
+		CACF6D4C4C2B87D219761B76 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF64329BD03910F3465CE7 /* SearchResultViewController.xib */; };
+		CACF6D7EA73F8E61CAD1ECF5 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF695DA2A2FF644544EBC5 /* AddressModel.m */; };
 		CACF6EB698F5C47329D273FC /* Json.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF67FE235854A42AE4473A /* Json.m */; };
 		F8AF78441E58CADB005E7690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78431E58CADB005E7690 /* main.m */; };
 		F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78461E58CADB005E7690 /* AppDelegate.m */; };
 		F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF784E1E58CADB005E7690 /* Assets.xcassets */; };
 		F8AF78521E58CADB005E7690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78501E58CADB005E7690 /* LaunchScreen.storyboard */; };
-		F8AF78681E58ED74005E7690 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78661E58ED74005E7690 /* SearchViewController.m */; };
-		F8AF78691E58ED74005E7690 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78671E58ED74005E7690 /* SearchViewController.xib */; };
-		F8AF786D1E58F049005E7690 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF786B1E58F049005E7690 /* OrderViewController.m */; };
-		F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF786C1E58F049005E7690 /* OrderViewController.xib */; };
-		F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78701E58F056005E7690 /* AccountViewController.m */; };
-		F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78711E58F056005E7690 /* AccountViewController.xib */; };
-		F8AF787C1E59C9E7005E7690 /* SearchPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */; };
-		F8AF78811E59CA09005E7690 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */; };
-		F8AF78821E59CA09005E7690 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */; };
-		F8AF78861E59CA1F005E7690 /* MessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78841E59CA1F005E7690 /* MessagingViewController.m */; };
-		F8AF78871E59CA1F005E7690 /* MessagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */; };
 		F8AF788A1E59E51B005E7690 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78891E59E51B005E7690 /* SearchModel.m */; };
 		F8AF78911E59E8ED005E7690 /* SearchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78901E59E8ED005E7690 /* SearchStore.m */; };
 		F8AF78941E59F3E2005E7690 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78931E59F3E2005E7690 /* ItemModel.m */; };
 		F8AF78971E59F3EC005E7690 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78961E59F3EC005E7690 /* ItemStore.m */; };
-		F8AF789B1E5B2F4D005E7690 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF78991E5B2F4D005E7690 /* LoginViewController.m */; };
-		F8AF789C1E5B2F4D005E7690 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */; };
-		F8AF78A01E5B2F6E005E7690 /* LoginCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */; };
-		F8AF78A11E5B2F6E005E7690 /* LoginCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CACF61694DE3AF749D5AC2E6 /* AddressStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressStore.h; sourceTree = "<group>"; };
+		CACF6176F661B11F96884B87 /* BuyerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyerModel.m; sourceTree = "<group>"; };
+		CACF619D0E16182D138C73AB /* BuyerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyerModel.h; sourceTree = "<group>"; };
+		CACF624AB488C745ED22FF81 /* SearchPastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPastViewController.m; sourceTree = "<group>"; };
+		CACF62BB99C95F0B7196EDD4 /* MessagingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagingViewController.xib; sourceTree = "<group>"; };
 		CACF630C61D6B815A30EB199 /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Token.m; sourceTree = "<group>"; };
 		CACF63123CC6D97180CC1EE8 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
+		CACF63D1EF30BD8439E9B617 /* BuyerStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyerStore.h; sourceTree = "<group>"; };
+		CACF6411BEF3C8EC3E76901B /* BillingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillingModel.m; sourceTree = "<group>"; };
+		CACF64329BD03910F3465CE7 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 		CACF6465D944918D7D0F1FDA /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json.h; sourceTree = "<group>"; };
+		CACF6484D2C99D97E8D1F932 /* LoginCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCreateViewController.m; sourceTree = "<group>"; };
+		CACF6511DD0C6BD8BFADF5B0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CACF65318C24B144006201D3 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		CACF66150843CEBE0572D77E /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		CACF66A3BF33EAB0726736A6 /* MessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingViewController.h; sourceTree = "<group>"; };
+		CACF66CEF081993A0707F1C8 /* AddressStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressStore.m; sourceTree = "<group>"; };
+		CACF67E2DA1DF28169D2915D /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		CACF67FE235854A42AE4473A /* Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Json.m; sourceTree = "<group>"; };
+		CACF6809D266D949D1E2DDFF /* BillingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillingStore.m; sourceTree = "<group>"; };
+		CACF685481CA5955C806FB17 /* BuyerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyerStore.m; sourceTree = "<group>"; };
+		CACF68EEE937696CC4E362EC /* LoginCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCreateViewController.h; sourceTree = "<group>"; };
+		CACF6905ABBEDAAE36A23B96 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		CACF691CFF70897964854052 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		CACF695DA2A2FF644544EBC5 /* AddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
+		CACF69DBCF1C2B4FFF8D504E /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CACF69ECEA402CE0B2EFB67D /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
+		CACF6A5EC50648E68580E30E /* BillingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillingModel.h; sourceTree = "<group>"; };
+		CACF6A9C4DD94B992A19CCBC /* AddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressModel.h; sourceTree = "<group>"; };
+		CACF6B6A5140D39A799E564D /* MessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingViewController.m; sourceTree = "<group>"; };
+		CACF6D0AA07F5744713D5241 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CACF6DA4F5E74E7A24376B7C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CACF6DAA42E02757F2BA51DB /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
+		CACF6E232ABE0C4B0674877D /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		CACF6E8E0E852E04EFB76773 /* BillingStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillingStore.h; sourceTree = "<group>"; };
+		CACF6EF274188D5EC5307340 /* SearchPastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPastViewController.h; sourceTree = "<group>"; };
+		CACF6F2074BA82838A457A50 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		CACF6F2486DBFB1942FA4DB4 /* LoginCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCreateViewController.xib; sourceTree = "<group>"; };
+		CACF6FD6834960AFF7D03F27 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CACF6FD6C2C076C1F02846B0 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CACF6FE4C162B6B763541861 /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
 		F8AF783F1E58CADB005E7690 /* classifieds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classifieds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF78431E58CADB005E7690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8AF78451E58CADB005E7690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,23 +90,6 @@
 		F8AF784E1E58CADB005E7690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AF78511E58CADB005E7690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8AF78531E58CADB005E7690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AF78651E58ED74005E7690 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		F8AF78661E58ED74005E7690 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		F8AF78671E58ED74005E7690 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		F8AF786A1E58F049005E7690 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
-		F8AF786B1E58F049005E7690 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
-		F8AF786C1E58F049005E7690 /* OrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
-		F8AF786F1E58F056005E7690 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
-		F8AF78701E58F056005E7690 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
-		F8AF78711E58F056005E7690 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
-		F8AF78791E59C9E7005E7690 /* SearchPastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPastViewController.h; sourceTree = "<group>"; };
-		F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPastViewController.m; sourceTree = "<group>"; };
-		F8AF787E1E59CA09005E7690 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
-		F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
-		F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
-		F8AF78831E59CA1F005E7690 /* MessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingViewController.h; sourceTree = "<group>"; };
-		F8AF78841E59CA1F005E7690 /* MessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingViewController.m; sourceTree = "<group>"; };
-		F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagingViewController.xib; sourceTree = "<group>"; };
 		F8AF78881E59E51B005E7690 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
 		F8AF78891E59E51B005E7690 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		F8AF788F1E59E8ED005E7690 /* SearchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchStore.h; sourceTree = "<group>"; };
@@ -71,12 +98,6 @@
 		F8AF78931E59F3E2005E7690 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
 		F8AF78951E59F3EC005E7690 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
 		F8AF78961E59F3EC005E7690 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
-		F8AF78981E5B2F4D005E7690 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		F8AF78991E5B2F4D005E7690 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		F8AF789D1E5B2F6E005E7690 /* LoginCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCreateViewController.h; sourceTree = "<group>"; };
-		F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCreateViewController.m; sourceTree = "<group>"; };
-		F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCreateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +111,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CACF638A4541AC47916A08A3 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				CACF62BB99C95F0B7196EDD4 /* MessagingViewController.xib */,
+				CACF691CFF70897964854052 /* SearchResultViewController.h */,
+				CACF69DBCF1C2B4FFF8D504E /* SearchViewController.xib */,
+				CACF65318C24B144006201D3 /* SearchResultViewController.m */,
+				CACF6FD6C2C076C1F02846B0 /* SearchViewController.h */,
+				CACF66A3BF33EAB0726736A6 /* MessagingViewController.h */,
+				CACF64329BD03910F3465CE7 /* SearchResultViewController.xib */,
+				CACF6D0AA07F5744713D5241 /* SearchViewController.m */,
+				CACF6B6A5140D39A799E564D /* MessagingViewController.m */,
+				CACF6EF274188D5EC5307340 /* SearchPastViewController.h */,
+				CACF624AB488C745ED22FF81 /* SearchPastViewController.m */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		CACF65FA764CC9B7A6FAB9BD /* order */ = {
+			isa = PBXGroup;
+			children = (
+				CACF6DAA42E02757F2BA51DB /* OrderViewController.xib */,
+				CACF66150843CEBE0572D77E /* OrderViewController.h */,
+				CACF6905ABBEDAAE36A23B96 /* OrderViewController.m */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		CACF6A3001656BF4588949BE /* account */ = {
+			isa = PBXGroup;
+			children = (
+				CACF6E232ABE0C4B0674877D /* AccountViewController.xib */,
+				CACF6F2074BA82838A457A50 /* AccountViewController.m */,
+				CACF67E2DA1DF28169D2915D /* AccountViewController.h */,
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
 		CACF6A68B8F0C009F27A6384 /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +156,12 @@
 				F8AF78891E59E51B005E7690 /* SearchModel.m */,
 				F8AF78921E59F3E2005E7690 /* ItemModel.h */,
 				F8AF78931E59F3E2005E7690 /* ItemModel.m */,
+				CACF6176F661B11F96884B87 /* BuyerModel.m */,
+				CACF619D0E16182D138C73AB /* BuyerModel.h */,
+				CACF695DA2A2FF644544EBC5 /* AddressModel.m */,
+				CACF6A9C4DD94B992A19CCBC /* AddressModel.h */,
+				CACF6411BEF3C8EC3E76901B /* BillingModel.m */,
+				CACF6A5EC50648E68580E30E /* BillingModel.h */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -104,31 +169,25 @@
 		CACF6B521BF626BA5C2223CE /* views */ = {
 			isa = PBXGroup;
 			children = (
-				F8AF78651E58ED74005E7690 /* SearchViewController.h */,
-				F8AF78661E58ED74005E7690 /* SearchViewController.m */,
-				F8AF78671E58ED74005E7690 /* SearchViewController.xib */,
-				F8AF78791E59C9E7005E7690 /* SearchPastViewController.h */,
-				F8AF787A1E59C9E7005E7690 /* SearchPastViewController.m */,
-				F8AF787E1E59CA09005E7690 /* SearchResultViewController.h */,
-				F8AF787F1E59CA09005E7690 /* SearchResultViewController.m */,
-				F8AF78801E59CA09005E7690 /* SearchResultViewController.xib */,
-				F8AF786A1E58F049005E7690 /* OrderViewController.h */,
-				F8AF786B1E58F049005E7690 /* OrderViewController.m */,
-				F8AF786C1E58F049005E7690 /* OrderViewController.xib */,
-				F8AF786F1E58F056005E7690 /* AccountViewController.h */,
-				F8AF78701E58F056005E7690 /* AccountViewController.m */,
-				F8AF78711E58F056005E7690 /* AccountViewController.xib */,
-				F8AF78831E59CA1F005E7690 /* MessagingViewController.h */,
-				F8AF78841E59CA1F005E7690 /* MessagingViewController.m */,
-				F8AF78851E59CA1F005E7690 /* MessagingViewController.xib */,
-				F8AF78981E5B2F4D005E7690 /* LoginViewController.h */,
-				F8AF78991E5B2F4D005E7690 /* LoginViewController.m */,
-				F8AF789A1E5B2F4D005E7690 /* LoginViewController.xib */,
-				F8AF789D1E5B2F6E005E7690 /* LoginCreateViewController.h */,
-				F8AF789E1E5B2F6E005E7690 /* LoginCreateViewController.m */,
-				F8AF789F1E5B2F6E005E7690 /* LoginCreateViewController.xib */,
+				CACF6CB2B5E522D53BD34022 /* login */,
+				CACF638A4541AC47916A08A3 /* search */,
+				CACF65FA764CC9B7A6FAB9BD /* order */,
+				CACF6A3001656BF4588949BE /* account */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		CACF6CB2B5E522D53BD34022 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CACF6DA4F5E74E7A24376B7C /* LoginViewController.h */,
+				CACF6511DD0C6BD8BFADF5B0 /* LoginViewController.m */,
+				CACF68EEE937696CC4E362EC /* LoginCreateViewController.h */,
+				CACF6F2486DBFB1942FA4DB4 /* LoginCreateViewController.xib */,
+				CACF6484D2C99D97E8D1F932 /* LoginCreateViewController.m */,
+				CACF6FD6834960AFF7D03F27 /* LoginViewController.xib */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 		CACF6FB0254C0DBEEB38204A /* util */ = {
@@ -138,6 +197,8 @@
 				CACF6465D944918D7D0F1FDA /* Json.h */,
 				CACF630C61D6B815A30EB199 /* Token.m */,
 				CACF63123CC6D97180CC1EE8 /* Token.h */,
+				CACF69ECEA402CE0B2EFB67D /* Http.m */,
+				CACF6FE4C162B6B763541861 /* Http.h */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -190,6 +251,12 @@
 				F8AF78901E59E8ED005E7690 /* SearchStore.m */,
 				F8AF78951E59F3EC005E7690 /* ItemStore.h */,
 				F8AF78961E59F3EC005E7690 /* ItemStore.m */,
+				CACF685481CA5955C806FB17 /* BuyerStore.m */,
+				CACF63D1EF30BD8439E9B617 /* BuyerStore.h */,
+				CACF66CEF081993A0707F1C8 /* AddressStore.m */,
+				CACF61694DE3AF749D5AC2E6 /* AddressStore.h */,
+				CACF6809D266D949D1E2DDFF /* BillingStore.m */,
+				CACF6E8E0E852E04EFB76773 /* BillingStore.h */,
 			);
 			name = stores;
 			sourceTree = "<group>";
@@ -252,15 +319,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF789C1E5B2F4D005E7690 /* LoginViewController.xib in Resources */,
 				F8AF78521E58CADB005E7690 /* LaunchScreen.storyboard in Resources */,
-				F8AF78871E59CA1F005E7690 /* MessagingViewController.xib in Resources */,
 				F8AF784F1E58CADB005E7690 /* Assets.xcassets in Resources */,
-				F8AF78A11E5B2F6E005E7690 /* LoginCreateViewController.xib in Resources */,
-				F8AF78691E58ED74005E7690 /* SearchViewController.xib in Resources */,
-				F8AF786E1E58F049005E7690 /* OrderViewController.xib in Resources */,
-				F8AF78731E58F056005E7690 /* AccountViewController.xib in Resources */,
-				F8AF78821E59CA09005E7690 /* SearchResultViewController.xib in Resources */,
+				CACF617CF19077CFB34736D3 /* AccountViewController.xib in Resources */,
+				CACF632E88217320D03B4BCF /* LoginCreateViewController.xib in Resources */,
+				CACF6924C0DE4B230E4D6B20 /* LoginViewController.xib in Resources */,
+				CACF64D05BFCF5B0D4E9E268 /* OrderViewController.xib in Resources */,
+				CACF69D4FECD4671ADDDD483 /* MessagingViewController.xib in Resources */,
+				CACF63E4B8F1146FC23F6631 /* SearchViewController.xib in Resources */,
+				CACF6D4C4C2B87D219761B76 /* SearchResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,22 +338,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF787C1E59C9E7005E7690 /* SearchPastViewController.m in Sources */,
-				F8AF78861E59CA1F005E7690 /* MessagingViewController.m in Sources */,
-				F8AF78A01E5B2F6E005E7690 /* LoginCreateViewController.m in Sources */,
 				F8AF78971E59F3EC005E7690 /* ItemStore.m in Sources */,
 				F8AF78471E58CADB005E7690 /* AppDelegate.m in Sources */,
-				F8AF789B1E5B2F4D005E7690 /* LoginViewController.m in Sources */,
 				F8AF78941E59F3E2005E7690 /* ItemModel.m in Sources */,
-				F8AF78681E58ED74005E7690 /* SearchViewController.m in Sources */,
 				F8AF78441E58CADB005E7690 /* main.m in Sources */,
 				F8AF788A1E59E51B005E7690 /* SearchModel.m in Sources */,
-				F8AF78811E59CA09005E7690 /* SearchResultViewController.m in Sources */,
-				F8AF786D1E58F049005E7690 /* OrderViewController.m in Sources */,
-				F8AF78721E58F056005E7690 /* AccountViewController.m in Sources */,
 				F8AF78911E59E8ED005E7690 /* SearchStore.m in Sources */,
 				CACF6EB698F5C47329D273FC /* Json.m in Sources */,
 				CACF64426720611664F28209 /* Token.m in Sources */,
+				CACF6CB883EB3019FBBC49B4 /* AccountViewController.m in Sources */,
+				CACF689C31E6AC392F1EE9AC /* LoginViewController.m in Sources */,
+				CACF60554E940D97BC9DD7E9 /* LoginCreateViewController.m in Sources */,
+				CACF64AA0DCE523EE15F527D /* OrderViewController.m in Sources */,
+				CACF645223529E2B03F9C30B /* SearchResultViewController.m in Sources */,
+				CACF6379D708CD9D30B368F4 /* SearchViewController.m in Sources */,
+				CACF699CD5C227E4029B1ED3 /* MessagingViewController.m in Sources */,
+				CACF639B27BFF4E3BBF01C98 /* SearchPastViewController.m in Sources */,
+				CACF6396A407F1FD8CD943BF /* Http.m in Sources */,
+				CACF61CDBE9487145E9AA87C /* BuyerModel.m in Sources */,
+				CACF67E5307A64065B28B07D /* BuyerStore.m in Sources */,
+				CACF65EB545659347F2E8C0E /* AddressStore.m in Sources */,
+				CACF63C4E31A54508D807589 /* BillingStore.m in Sources */,
+				CACF6D7EA73F8E61CAD1ECF5 /* AddressModel.m in Sources */,
+				CACF61A28C147362BD0EE57F /* BillingModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

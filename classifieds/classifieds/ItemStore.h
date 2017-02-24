@@ -12,10 +12,8 @@
 
 @interface ItemStore : NSObject
 
-+ (NSArray *) items;
-
-+ (ItemModel *) findByName:(NSString *) name;
-
-+ (ItemModel *) findById:(int) itemId;
++ (void) findByName:(NSString *) name
+          onSuccess:(void (^)(ItemModel *item)) success
+             onFail:(void (^)(NSString *error)) fail;
 
 @end
