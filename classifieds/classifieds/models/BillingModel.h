@@ -7,13 +7,13 @@
 
 @interface BillingModel : NSObject
 
-@property (nonatomic) unsigned long billingId;
+@property (nonatomic, copy) NSNumber *billingId;
 @property (nonatomic, copy) NSString *cardNetwork;
 @property (nonatomic, copy) NSString *cardNumber;
 @property (nonatomic, copy) NSString *cardSecurityCode;
 @property (nonatomic, copy) NSDate *cardExpiry;
 
-- (instancetype) initWithBillingId:(unsigned long) billingId
+- (instancetype) initWithBillingId:(NSNumber *) billingId
                        cardNetwork:(NSString *) cardNetwork
                         cardNumber:(NSString *) cardNumber
                   cardSecurityCode:(NSString *) cardSecurityCode

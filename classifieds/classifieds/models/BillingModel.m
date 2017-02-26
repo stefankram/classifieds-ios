@@ -8,7 +8,7 @@
 
 @implementation BillingModel
 
-- (instancetype) initWithBillingId:(unsigned long) billingId
+- (instancetype) initWithBillingId:(NSNumber *) billingId
                        cardNetwork:(NSString *) cardNetwork
                         cardNumber:(NSString *) cardNumber
                   cardSecurityCode:(NSString *) cardSecurityCode
@@ -44,7 +44,7 @@
 
     if (json)
     {
-        return [self initWithBillingId:[json[@"id"] unsignedLongValue]
+        return [self initWithBillingId:json[@"id"]
                            cardNetwork:json[@"card_network"]
                             cardNumber:json[@"card_number"]
                       cardSecurityCode:json[@"card_security_code"]
@@ -54,6 +54,16 @@
     {
         return nil;
     }
+}
+
+- (NSString *) description
+{
+    return [[NSString alloc] initWithFormat:@"%@, %@, %@, %@, %@",
+                                            self.billingId,
+                                            self.cardNetwork,
+                                            self.cardNumber,
+                                            self.cardSecurityCode,
+                                            self.cardExpiry];
 }
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QMChatViewController.h"
 
-@interface MessagingViewController : UIViewController
+@interface MessagingViewController : QMChatViewController 
 
 @end

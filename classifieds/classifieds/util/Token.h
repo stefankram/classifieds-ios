@@ -5,17 +5,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class UserModel;
+
 @interface Token : NSObject
 
-+ (NSURLRequest *) obtainWithUsername:(NSString *) username
-                             password:(NSString *) password;
++ (void) obtainWithUsername:(NSString *) username
+                   password:(NSString *) password
+                  onSuccess:(void (^)(NSString *token)) success
+                     onFail:(void (^)(NSString *error)) fail;
 
-+ (NSURLRequest *) refreshToken:(NSString *) token;
++ (void) refreshWithToken:(NSString *) token
+                onSuccess:(void (^)(NSString *newToken)) success
+                   onFail:(void (^)(NSString *error)) fail;
 
-+ (NSString *) getToken;
-
-+ (void) setToken:(NSString *) token;
-
-+ (NSString *) getAuthHeader;
++ (NSString *) authHeader;
 
 @end

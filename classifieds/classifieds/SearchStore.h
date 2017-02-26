@@ -14,7 +14,12 @@
 
 + (NSArray *) searches;
 
-+ (void) createWithItemName:(NSString *) itemName
-                description:(NSString *) description;
++ (void) createSearch:(SearchModel *) search
+            onSuccess:(void (^)(SearchModel *model)) success
+               onFail:(void (^)(NSString *error)) fail;
+
++ (void) findAllWithBuyerId:(NSNumber *) buyerId
+                  onSuccess:(void (^)(void)) success
+                     onFail:(void (^)(NSString *error)) fail;
 
 @end

@@ -7,19 +7,25 @@
 
 @interface BuyerModel : NSObject
 
-@property (nonatomic) unsigned long buyerId;
-@property (nonatomic) unsigned long addressId;
-@property (nonatomic) unsigned long billingId;
+@property (nonatomic, copy) NSNumber *buyerId;
+@property (nonatomic, copy) NSNumber *addressId;
+@property (nonatomic, copy) NSNumber *billingId;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *profilePic;
-@property (nonatomic) unsigned long userId;
+@property (nonatomic, copy) NSNumber *userId;
 
-- (instancetype) initWithBuyerId:(unsigned long) buyerId
-                       addressId:(unsigned long) addressId
-                       billingId:(unsigned long) billingId
+- (instancetype) initWithBuyerId:(NSNumber *) buyerId
+                       addressId:(NSNumber *) addressId
+                       billingId:(NSNumber *) billingId
                            phone:(NSString *) phone
                       profilePic:(NSString *) profilePic
-                          userId:(unsigned long) userId;
+                          userId:(NSNumber *) userId;
+
+- (instancetype) initWithAddressId:(NSNumber *) addressId
+                         billingId:(NSNumber *) billingId
+                             phone:(NSString *) phone
+                        profilePic:(NSString *) profilePic
+                            userId:(NSNumber *) userId;
 
 - (instancetype) initWithJson:(NSData *) data;
 

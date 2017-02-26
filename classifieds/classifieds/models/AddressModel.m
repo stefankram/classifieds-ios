@@ -8,7 +8,7 @@
 
 @implementation AddressModel
 
-- (instancetype) initWithAddressId:(unsigned long) addressId
+- (instancetype) initWithAddressId:(NSNumber *) addressId
                               city:(NSString *) city
                            country:(NSString *) country
                         postalCode:(NSString *) postalCode
@@ -48,7 +48,7 @@
 
     if (json)
     {
-        return [self initWithAddressId:[json[@"id"] unsignedLongValue]
+        return [self initWithAddressId:json[@"id"]
                                   city:json[@"city"]
                                country:json[@"country"]
                             postalCode:json[@"postal_code"]
@@ -59,6 +59,17 @@
     {
         return nil;
     }
+}
+
+- (NSString *) description
+{
+    return [[NSString alloc] initWithFormat:@"%@, %@, %@, %@, %@, %@",
+                                            self.addressId,
+                                            self.city,
+                                            self.country,
+                                            self.postalCode,
+                                            self.province,
+                                            self.street];
 }
 
 @end

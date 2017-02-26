@@ -5,6 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class BillingModel;
 
 @interface BillingStore : NSObject
+
++ (void) createBilling:(BillingModel *) billing
+             onSuccess:(void (^)(BillingModel *model)) success
+                onFail:(void (^)(NSString *error)) fail;
+
 @end

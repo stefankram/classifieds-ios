@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchResultViewController : UIViewController
+@class SearchModel;
+
+@interface SearchResultViewController : UITableViewController
+
+- (instancetype) initWithSearchModel:(SearchModel *) search;
 
 @end

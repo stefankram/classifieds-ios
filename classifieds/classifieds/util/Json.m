@@ -27,4 +27,24 @@
     }
 }
 
++ (NSArray *) parseJsonArray:(NSData *) data
+{
+    NSError *error = nil;
+
+    id parsed = [NSJSONSerialization JSONObjectWithData:data
+                                                options:0
+                                                  error:&error];
+
+    if (error) return nil;
+
+    if ([parsed isKindOfClass:[NSArray class]])
+    {
+        return parsed;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
 @end

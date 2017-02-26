@@ -9,4 +9,6 @@
 
 + (NSDictionary *) parseJsonObject:(NSData *) data;
 
++ (NSArray *) parseJsonArray:(NSData *) data;
+
 @end

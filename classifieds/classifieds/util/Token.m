@@ -4,66 +4,125 @@
 //
 
 #import "Token.h"
+#import "UserModel.h"
+#import "Url.h"
+#import "Json.h"
 
 @implementation Token
 
-+ (NSURLRequest *) obtainWithUsername:(NSString *) username
-                             password:(NSString *) password
++ (void) obtainWithUsername:(NSString *) username
+                   password:(NSString *) password
+                  onSuccess:(void (^)(NSString *token)) success
+                     onFail:(void (^)(NSString *error)) fail
 {
-    NSString *post = [NSString stringWithFormat:@"{"
-                                                        "\"username\": \"%@\","
-                                                        "\"password\": \"%@\""
-                                                        "}",
-                                                username,
-                                                password];
+    NSData *body = [[NSString stringWithFormat:
+            @"{"
+                    "\"username\": \"%@\","
+                    "\"password\": \"%@\""
+                    "}",
+            username,
+            password]
+            dataUsingEncoding:NSUTF8StringEncoding
+         allowLossyConversion:YES];
 
-    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSString *bodyLength = [NSString stringWithFormat:@"%d", [body length]];
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://localhost:8000/api/token/obtain/"]];
+    [request setURL:[Url obtainToken]];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:bodyLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
+    [request setHTTPBody:body];
 
-    return request;
+    [[[NSURLSession sharedSession]
+            dataTaskWithRequest:request
+              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+              {
+                  if (!error)
+                  {
+                      NSInteger statusCode = ((NSHTTPURLResponse *) response).statusCode;
+                      if (statusCode == 200)
+                      {
+                          NSDictionary *json = [Json parseJsonObject:data];
+                          if (json)
+                          {
+                              success(json[@"token"]);
+                          }
+                          else
+                          {
+                              fail(@"Malformed JSON");
+                          }
+                      }
+                      else
+                      {
+                          fail([[NSString alloc] initWithData:data
+                                                     encoding:NSUTF8StringEncoding]);
+                      }
+                  }
+                  else
+                  {
+                      fail([error localizedDescription]);
+                  }
+              }] resume];
 }
 
-+ (NSURLRequest *) refreshToken:(NSString *) token
++ (void) refreshWithToken:(NSString *) token
+                onSuccess:(void (^)(NSString *newToken)) success
+                   onFail:(void (^)(NSString *error)) fail
 {
-    NSString *post = [NSString stringWithFormat:@"{"
-                                                        "\"token\": \"%@\""
-                                                        "}",
-                                                token];
+    NSData *body = [[NSString stringWithFormat:
+            @"{"
+                    "\"token\": \"%@\""
+                    "}",
+            token]
+            dataUsingEncoding:NSUTF8StringEncoding
+         allowLossyConversion:YES];
 
-    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSString *bodyLength = [NSString stringWithFormat:@"%d", [body length]];
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://localhost:8000/api/token/refresh/"]];
+    [request setURL:[Url refreshToken]];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:bodyLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
+    [request setHTTPBody:body];
 
-    return request;
+    [[[NSURLSession sharedSession]
+            dataTaskWithRequest:request
+              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+              {
+                  if (!error)
+                  {
+                      NSInteger statusCode = ((NSHTTPURLResponse *) response).statusCode;
+                      if (statusCode == 200)
+                      {
+                          NSDictionary *json = [Json parseJsonObject:data];
+                          if (json)
+                          {
+                              success(json[@"token"]);
+                          }
+                          else
+                          {
+                              fail(@"Malformed JSON");
+                          }
+                      }
+                      else
+                      {
+                          fail([[NSString alloc] initWithData:data
+                                                     encoding:NSUTF8StringEncoding]);
+                      }
+                  }
+                  else
+                  {
+                      fail([error localizedDescription]);
+                  }
+              }] resume];
 }
 
-+ (NSString *) getToken
++ (NSString *) authHeader
 {
-    return [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
-}
-
-+ (void) setToken:(NSString *) token
-{
-    [[NSUserDefaults standardUserDefaults] setValue:token
-                                             forKey:@"token"];
-}
-
-+ (NSString *) getAuthHeader
-{
-    return [[NSString alloc] initWithFormat:@"JWT %@", [self getToken]];
+    return [[NSString alloc] initWithFormat:@"JWT %@",
+                    [[NSUserDefaults standardUserDefaults] stringForKey:@"token"]];
 }
 
 @end

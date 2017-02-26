@@ -8,12 +8,12 @@
 
 @implementation BuyerModel
 
-- (instancetype) initWithBuyerId:(unsigned long) buyerId
-                       addressId:(unsigned long) addressId
-                       billingId:(unsigned long) billingId
+- (instancetype) initWithBuyerId:(NSNumber *) buyerId
+                       addressId:(NSNumber *) addressId
+                       billingId:(NSNumber *) billingId
                            phone:(NSString *) phone
                       profilePic:(NSString *) profilePic
-                          userId:(unsigned long) userId
+                          userId:(NSNumber *) userId
 {
     if (self = [super init])
     {
@@ -28,18 +28,32 @@
     return self;
 }
 
+- (instancetype) initWithAddressId:(NSNumber *) addressId
+                         billingId:(NSNumber *) billingId
+                             phone:(NSString *) phone
+                        profilePic:(NSString *) profilePic
+                            userId:(NSNumber *) userId
+{
+    return [self initWithBuyerId:nil
+                       addressId:addressId
+                       billingId:billingId
+                           phone:phone
+                      profilePic:profilePic
+                          userId:userId];
+}
+
 - (instancetype) initWithJson:(NSData *) data
 {
     NSDictionary *json = [Json parseJsonObject:data];
 
     if (json)
     {
-        return [self initWithBuyerId:[json[@"id"] unsignedLongValue]
-                           addressId:[json[@"address_id"] unsignedLongValue]
-                           billingId:[json[@"billing_id"] unsignedLongValue]
+        return [self initWithBuyerId:json[@"id"]
+                           addressId:json[@"address_id"]
+                           billingId:json[@"billing_id"]
                                phone:json[@"phone"]
                           profilePic:json[@"profile_pic"]
-                              userId:[json[@"user_id"] unsignedLongValue]];
+                              userId:json[@"user_id"]];
     }
     else
     {
@@ -49,7 +63,7 @@
 
 - (NSString *) description
 {
-    return [[NSString alloc] initWithFormat:@"%lu, %lu, %lu, %@, %@, %lu",
+    return [[NSString alloc] initWithFormat:@"%@, %@, %@, %@, %@, %@",
                                             self.buyerId,
                                             self.addressId,
                                             self.billingId,

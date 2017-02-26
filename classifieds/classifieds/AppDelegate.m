@@ -10,44 +10,25 @@
 #import "AccountViewController.h"
 #import "LoginViewController.h"
 #import "Token.h"
-#import "Json.h"
-
-@interface AppDelegate ()
-
-@property (strong, nonatomic) UINavigationController *loginNav;
-@property (strong, nonatomic) UINavigationController *searchNav;
-@property (strong, nonatomic) UINavigationController *orderNav;
-@property (strong, nonatomic) UINavigationController *accountNav;
-
-@property (strong, nonatomic) LoginViewController *loginView;
-@property (strong, nonatomic) SearchViewController *searchView;
-@property (strong, nonatomic) OrderViewController *orderView;
-@property (strong, nonatomic) AccountViewController *accountView;
-
-@property (strong, nonatomic) UITabBarController *tabBar;
-
-@end
 
 @implementation AppDelegate
 
 - (BOOL)          application:(UIApplication *) application
 didFinishLaunchingWithOptions:(NSDictionary *) launchOptions
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
-    NSString *token = [Token getToken];
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
 
     if (token)
     {
-        NSURLRequest *request = [Token refreshToken:token];
-
-        [[[NSURLSession sharedSession]
-                dataTaskWithRequest:request
-                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                  {
-                      [self handleRefreshedData:data
-                                       response:(NSHTTPURLResponse *) response
-                                          error:error];
-                  }] resume];
+        [Token refreshWithToken:token
+                      onSuccess:^(NSString *newToken)
+                      {
+                          [self refreshTokenSuccess:newToken];
+                      }
+                         onFail:^(NSString *error)
+                         {
+                             [self refreshTokenFail:error];
+                         }];
     }
     else
     {
@@ -57,76 +38,55 @@ didFinishLaunchingWithOptions:(NSDictionary *) launchOptions
     return YES;
 }
 
-- (void) handleRefreshedData:(NSData *) data
-                    response:(NSHTTPURLResponse *) response
-                       error:(NSError *) error
+- (void) refreshTokenFail:(NSString *) error
 {
-    if (!error)
+    NSLog(@"Refresh token fail: %@", error);
+}
+
+- (void) refreshTokenSuccess:(NSString *) newToken
+{
+    [[NSUserDefaults standardUserDefaults] setObject:newToken
+                                              forKey:@"token"];
+
+    dispatch_async(dispatch_get_main_queue(), ^
     {
-        if ([response statusCode] == 200)
-        {
-            NSDictionary *json = [Json parseJsonObject:data];
-            if (json)
-            {
-                [Token setToken:json[@"token"]];
+        // Setup search controller
+        UINavigationController *searchNav = [[UINavigationController alloc] init];
+        SearchViewController *searchView = [[SearchViewController alloc] init];
+        searchNav.viewControllers = @[searchView];
 
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    // Setup search controller
-                    self.searchNav = [[UINavigationController alloc] init];
-                    self.searchView = [[SearchViewController alloc] init];
-                    self.searchNav.viewControllers = @[self.searchView];
+        // Setup order controller
+        UINavigationController *orderNav = [[UINavigationController alloc] init];
+        OrderViewController *orderView = [[OrderViewController alloc] init];
+        orderNav.viewControllers = @[orderView];
 
-                    // Setup order controller
-                    self.orderNav = [[UINavigationController alloc] init];
-                    self.orderView = [[OrderViewController alloc] init];
-                    self.orderNav.viewControllers = @[self.orderView];
+        // Setup account controller
+        UINavigationController *accountNav = [[UINavigationController alloc] init];
+        AccountViewController *accountView = [[AccountViewController alloc] init];
+        accountNav.viewControllers = @[accountView];
 
-                    // Setup account controller
-                    self.accountNav = [[UINavigationController alloc] init];
-                    self.accountView = [[AccountViewController alloc] init];
-                    self.accountNav.viewControllers = @[self.accountView];
+        // Setup the tab bar
+        UITabBarController *tabBar = [[UITabBarController alloc] init];
+        tabBar.viewControllers = @[searchNav, orderNav, accountNav];
 
-                    // Setup the tab bar
-                    self.tabBar = [[UITabBarController alloc] init];
-                    self.tabBar.viewControllers = @[self.searchNav, self.orderNav, self.accountNav];
-
-                    // Set the window root view controller and properties
-                    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-                    self.window.rootViewController = self.tabBar;
-                    self.window.backgroundColor = [UIColor whiteColor];
-                    [self.window makeKeyAndVisible];
-                });
-            }
-            else
-            {
-                // Malformed JSON
-            }
-        }
-        else if ([response statusCode] == 400)
-        {
-            // Token is expired for a particular user
-        }
-        else
-        {
-            // Server error
-        }
-    }
-    else
-    {
-        // No internet
-    }
+        // Set the window root view controller and properties
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = tabBar;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+    });
 }
 
 - (void) noToken
 {
     // Setup the login controller
-    self.loginNav = [[UINavigationController alloc] init];
-    self.loginView = [[LoginViewController alloc] init];
-    self.loginNav.viewControllers = @[self.loginView];
+    UINavigationController *loginNav = [[UINavigationController alloc] init];
+    LoginViewController *loginView = [[LoginViewController alloc] init];
+    loginNav.viewControllers = @[loginView];
 
     // Set the window root view controller and properties
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.loginNav;
+    self.window.rootViewController = loginNav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }

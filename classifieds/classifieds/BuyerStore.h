@@ -9,16 +9,12 @@
 
 @interface BuyerStore : NSObject
 
-+ (void) createWithAddressId:(unsigned long) addressId
-                   billingId:(unsigned long) billingId
-                       phone:(NSString *) phone
-                  profilePic:(NSString *) profilePic
-                      userId:(unsigned long) userId
-                   onSuccess:(void (^)(unsigned long buyerId)) success
-                      onFail:(void (^)(NSString *error)) fail;
++ (void) createBuyer:(BuyerModel *) buyer
+           onSuccess:(void (^)(BuyerModel *model)) success
+              onFail:(void (^)(NSString *error)) fail;
 
-+ (void) findByUserId:(unsigned long) userId
-            onSuccess:(void (^)(BuyerModel *buyer)) success
++ (void) findByUserId:(NSNumber *) userId
+            onSuccess:(void (^)(BuyerModel *model)) success
                onFail:(void (^)(NSString *error)) fail;
 
 @end

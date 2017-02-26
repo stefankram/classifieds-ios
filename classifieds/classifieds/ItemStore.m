@@ -9,11 +9,11 @@
 #import "ItemStore.h"
 #import "ItemModel.h"
 #import "Token.h"
+#import "Url.h"
 
 @interface ItemStore ()
 
 @property (nonatomic, strong) NSMutableArray *items;
-@property (nonatomic, strong) NSString *itemUrl;
 
 @end
 
@@ -26,7 +26,6 @@ static ItemStore *store;
     if (self = [super init])
     {
         self.items = [[NSMutableArray alloc] init];
-        self.itemUrl = @"http://localhost:8000/api/item";
     }
 
     return self;
@@ -49,14 +48,11 @@ static ItemStore *store;
             }
         }
 
-        NSString *url = [[NSString alloc]
-                initWithFormat:@"%@/find/%@/", store.itemUrl, name];
-
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[NSURL URLWithString:url]];
+        [request setURL:[Url findItemWithName:name]];
         [request setHTTPMethod:@"GET"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [request setValue:[Token getAuthHeader] forHTTPHeaderField:@"Authorization"];
+        [request setValue:[Token authHeader] forHTTPHeaderField:@"Authorization"];
 
         [[[NSURLSession sharedSession]
                 dataTaskWithRequest:request

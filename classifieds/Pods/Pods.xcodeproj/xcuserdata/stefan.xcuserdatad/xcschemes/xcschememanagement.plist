@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-classifieds.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>QMChatViewController-QMChatViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>QMChatViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TTTAttributedLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1E8A5E31EAD94DEDCDB593FA392DAE7F</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>94D6E17A892637F7D12007244D9E76FC</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>A224C3F5A6C86B49CB38BFE00117769A</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>B063E4153A3E37FA9CD710DFEA500FC3</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>BF9B106EA95445DDE2BED9D00B930E30</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+	</dict>
+</dict>
+</plist>

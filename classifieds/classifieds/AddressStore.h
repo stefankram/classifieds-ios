@@ -9,12 +9,8 @@
 
 @interface AddressStore : NSObject
 
-+ (void) createWithAddress:(AddressModel *) address
-                 onSuccess:(void (^)(AddressModel *model)) success
-                    onFail:(void (^)(NSString *error)) fail;
-
-+ (void) findById:(unsigned long) addressId
-        onSuccess:(void (^)(AddressModel *model)) success
-           onFail:(void (^)(NSString *error)) fail;
++ (void) createAddress:(AddressModel *) address
+             onSuccess:(void (^)(AddressModel *model)) success
+                onFail:(void (^)(NSString *error)) fail;
 
 @end

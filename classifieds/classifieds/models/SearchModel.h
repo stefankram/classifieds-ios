@@ -10,16 +10,24 @@
 
 @interface SearchModel : NSObject
 
-@property (nonatomic) int searchId;
-@property (nonatomic) int buyerId;
+@property (nonatomic, copy) NSNumber *searchId;
+@property (nonatomic, copy) NSNumber *buyerId;
 @property (nonatomic, copy) NSDate *createdAt;
 @property (nonatomic, copy) NSString *desc;
-@property (nonatomic) int itemId;
+@property (nonatomic, copy) NSNumber *itemId;
 
-- (instancetype) initWithSearchId:(int) searchId
-                            buyer:(int) buyerId
+- (instancetype) initWithSearchId:(NSNumber *) searchId
+                          buyerId:(NSNumber *) buyerId
                         createdAt:(NSDate *) createdAt
-                      description:(NSString *) description
-                             item:(int) itemId;
+                      description:(NSString *) desc
+                           itemId:(NSNumber *) itemId;
+
+- (instancetype) initWithBuyerId:(NSNumber *) buyerId
+                     description:(NSString *) desc
+                          itemId:(NSNumber *) itemId;
+
+- (instancetype) initWithJson:(NSData *) data;
+
+- (instancetype) initWithDictionary:(NSDictionary *) dict;
 
 @end

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBillingViewController">
+            <connections>
+                <outlet property="cardExpiryMonthField" destination="vDb-Lb-xro" id="bwO-IK-dil"/>
+                <outlet property="cardExpiryYearField" destination="Xb3-2W-24l" id="uhs-zy-rdF"/>
+                <outlet property="cardNetworkControl" destination="aOc-bb-rLJ" id="LAp-fm-yk1"/>
+                <outlet property="cardNumberField" destination="GbR-zf-Wrw" id="KnB-fB-PsW"/>
+                <outlet property="cardSecurityCodeField" destination="2P5-50-QPC" id="oY4-1w-y1X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO9-EQ-UDg">
+                    <rect key="frame" x="8" y="83" width="304" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Card Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VB-1R-vqd">
+                    <rect key="frame" x="8" y="207" width="304" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Card Expiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-zZ-wSr">
+                    <rect key="frame" x="8" y="145" width="148" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Security Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpr-dj-SJd">
+                    <rect key="frame" x="164" y="145" width="148" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-zf-Wrw">
+                    <rect key="frame" x="8" y="107" width="304" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDb-Lb-xro">
+                    <rect key="frame" x="8" y="169" width="70" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-2W-24l">
+                    <rect key="frame" x="86" y="169" width="70" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2P5-50-QPC">
+                    <rect key="frame" x="164" y="169" width="148" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-bb-rLJ">
+                    <rect key="frame" x="8" y="231" width="304" height="29"/>
+                    <segments>
+                        <segment title="Visa"/>
+                        <segment title="Mastercard"/>
+                        <segment title="Amex"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2P5-50-QPC" secondAttribute="trailing" constant="8" id="12X-z8-DJ8"/>
+                <constraint firstItem="kO9-EQ-UDg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="83" id="3Ta-9S-fut"/>
+                <constraint firstItem="vDb-Lb-xro" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="54E-4n-EZM"/>
+                <constraint firstAttribute="trailing" secondItem="GbR-zf-Wrw" secondAttribute="trailing" constant="8" id="7tz-hP-df4"/>
+                <constraint firstAttribute="trailing" secondItem="Vpr-dj-SJd" secondAttribute="trailing" constant="8" id="DHn-i6-Hnw"/>
+                <constraint firstItem="2P5-50-QPC" firstAttribute="top" secondItem="Vpr-dj-SJd" secondAttribute="bottom" constant="8" id="HBw-H4-mC8"/>
+                <constraint firstAttribute="trailing" secondItem="kO9-EQ-UDg" secondAttribute="trailing" constant="8" id="K26-0f-yRA"/>
+                <constraint firstItem="Xb3-2W-24l" firstAttribute="leading" secondItem="vDb-Lb-xro" secondAttribute="trailing" constant="8" id="KNH-rU-OBY"/>
+                <constraint firstItem="vDb-Lb-xro" firstAttribute="top" secondItem="C5p-zZ-wSr" secondAttribute="bottom" constant="8" id="Lh4-bL-7Wi"/>
+                <constraint firstAttribute="trailing" secondItem="7VB-1R-vqd" secondAttribute="trailing" constant="8" id="N7N-qH-PlM"/>
+                <constraint firstItem="7VB-1R-vqd" firstAttribute="top" secondItem="2P5-50-QPC" secondAttribute="bottom" constant="8" id="Q4B-6n-VCs"/>
+                <constraint firstItem="2P5-50-QPC" firstAttribute="leading" secondItem="Xb3-2W-24l" secondAttribute="trailing" constant="8" id="QtL-PQ-A5s"/>
+                <constraint firstItem="Xb3-2W-24l" firstAttribute="leading" secondItem="vDb-Lb-xro" secondAttribute="trailing" constant="8" id="SUA-g7-71X"/>
+                <constraint firstItem="Vpr-dj-SJd" firstAttribute="leading" secondItem="C5p-zZ-wSr" secondAttribute="trailing" constant="8" id="TgN-7R-dsg"/>
+                <constraint firstItem="Vpr-dj-SJd" firstAttribute="top" secondItem="GbR-zf-Wrw" secondAttribute="bottom" constant="8" id="X5C-Ae-E9z"/>
+                <constraint firstItem="Vpr-dj-SJd" firstAttribute="width" secondItem="C5p-zZ-wSr" secondAttribute="width" id="bcy-fG-lwb"/>
+                <constraint firstItem="C5p-zZ-wSr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cnU-VA-NFw"/>
+                <constraint firstItem="2P5-50-QPC" firstAttribute="leading" secondItem="Xb3-2W-24l" secondAttribute="trailing" constant="8" id="myU-4Z-ZIQ"/>
+                <constraint firstItem="7VB-1R-vqd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="oO1-8F-dOp"/>
+                <constraint firstItem="Xb3-2W-24l" firstAttribute="width" secondItem="vDb-Lb-xro" secondAttribute="width" id="q3X-b3-Knb"/>
+                <constraint firstItem="C5p-zZ-wSr" firstAttribute="top" secondItem="GbR-zf-Wrw" secondAttribute="bottom" constant="8" id="rN8-Av-B8a"/>
+                <constraint firstItem="GbR-zf-Wrw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="rXJ-Da-cMs"/>
+                <constraint firstItem="Xb3-2W-24l" firstAttribute="top" secondItem="C5p-zZ-wSr" secondAttribute="bottom" constant="8" id="ss9-1c-oO2"/>
+                <constraint firstItem="kO9-EQ-UDg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="v4b-9p-7Ht"/>
+                <constraint firstItem="GbR-zf-Wrw" firstAttribute="top" secondItem="kO9-EQ-UDg" secondAttribute="bottom" constant="8" id="ygW-sL-jDS"/>
+                <constraint firstItem="Vpr-dj-SJd" firstAttribute="leading" secondItem="C5p-zZ-wSr" secondAttribute="trailing" constant="8" id="zXC-WO-goy"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

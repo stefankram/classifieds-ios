@@ -11,7 +11,7 @@
 
 @implementation ItemModel
 
-- (instancetype) initWithItemId:(unsigned long) itemId
+- (instancetype) initWithItemId:(NSNumber *) itemId
                       available:(BOOL) available
                       createdAt:(NSDate *) createdAt
                            name:(NSString *) name
@@ -29,6 +29,15 @@
     return self;
 }
 
+- (instancetype) initWithName:(NSString *) name
+                     itemType:(NSString *) itemType
+{
+    return [self initWithItemId:nil
+                      available:YES
+                      createdAt:nil
+                           name:name
+                       itemType:itemType];
+}
 
 - (instancetype) initWithJson:(NSData *) data
 {
@@ -36,7 +45,7 @@
 
     if (json)
     {
-        return [self initWithItemId:[json[@"id"] unsignedLongValue]
+        return [self initWithItemId:json[@"id"]
                           available:[json[@"available"] boolValue]
                           createdAt:json[@"created_at"]
                                name:json[@"name"]
@@ -50,7 +59,7 @@
 
 - (NSString *) description
 {
-    return [[NSString alloc] initWithFormat:@"%lu, %@, %@, %@, %@",
+    return [[NSString alloc] initWithFormat:@"%@, %@, %@, %@, %@",
                                             self.itemId,
                                             self.available ? @"YES" : @"NO",
                                             self.createdAt,

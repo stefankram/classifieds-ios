@@ -5,7 +5,7 @@
 
 #import "AddressStore.h"
 #import "AddressModel.h"
-#import "Token.h"
+#import "Url.h"
 
 @interface AddressStore ()
 
@@ -17,6 +17,7 @@
 
 static AddressStore *store;
 
+/* INIT method */
 - (instancetype) init
 {
     if (self = [super init])
@@ -27,91 +28,39 @@ static AddressStore *store;
     return self;
 }
 
-+ (void) createWithAddress:(AddressModel *) address
-                 onSuccess:(void (^)(AddressModel *model)) success
-                    onFail:(void (^)(NSString *error)) fail
-{
-    NSString *post = [NSString stringWithFormat:@"{"
-                                                        "\"city\": \"%@\","
-                                                        "\"country\": \"%@\","
-                                                        "\"postal_code\": \"%@\","
-                                                        "\"province\": \"%@\","
-                                                        "\"street\": \"%@\","
-                                                        "}",
-                                                address.city,
-                                                address.country,
-                                                address.postalCode,
-                                                address.province,
-                                                address.street];
-
-    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding
-                          allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://localhost:8000/api/address/create/"]];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
-
-    [[[NSURLSession sharedSession]
-            dataTaskWithRequest:request
-              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-              {
-                  if (!error)
-                  {
-                      int statusCode = ((NSHTTPURLResponse *) response).statusCode;
-                      if (statusCode == 200)
-                      {
-                          AddressModel *model = [[AddressModel alloc] initWithJson:data];
-                          if (model)
-                          {
-                              success(model);
-                          }
-                          else
-                          {
-                              fail(@"Malformed JSON");
-                          }
-                      }
-                      else
-                      {
-                          fail([[NSString alloc] initWithData:data
-                                                     encoding:NSUTF8StringEncoding]);
-                      }
-                  }
-                  else
-                  {
-                      fail([error localizedDescription]);
-                  }
-              }] resume];
-}
-
-+ (void) findById:(unsigned long) addressId
-        onSuccess:(void (^)(AddressModel *model)) success
-           onFail:(void (^)(NSString *error)) fail
+/* CREATE method */
++ (void) createAddress:(AddressModel *) address
+             onSuccess:(void (^)(AddressModel *model)) success
+                onFail:(void (^)(NSString *error)) fail
 {
     @synchronized (self)
     {
         if (!store) store = [[AddressStore alloc] init];
 
-        for (AddressModel *address in store.addresses)
-        {
-            if (address.addressId == addressId)
-            {
-                success(address);
-                return;
-            }
-        }
+        NSData *body = [[NSString stringWithFormat:
+                @"{"
+                        "\"city\": \"%@\","
+                        "\"country\": \"%@\","
+                        "\"postal_code\": \"%@\","
+                        "\"province\": \"%@\","
+                        "\"street\": \"%@\""
+                        "}",
+                address.city,
+                address.country,
+                address.postalCode,
+                address.province,
+                address.street]
+                dataUsingEncoding:NSUTF8StringEncoding
+             allowLossyConversion:YES];
 
-        NSString *url = [[NSString alloc]
-                initWithFormat:@"http://localhost:8000/api/address/%lu/", addressId];
+        NSString *bodyLength = [NSString stringWithFormat:@"%d", [body length]];
 
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[NSURL URLWithString:url]];
-        [request setHTTPMethod:@"GET"];
+        [request setURL:[Url createAddress]];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:bodyLength forHTTPHeaderField:@"Content-Length"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [request setValue:[Token getAuthHeader] forHTTPHeaderField:@"Authorization"];
+        [request setHTTPBody:body];
 
         [[[NSURLSession sharedSession]
                 dataTaskWithRequest:request
@@ -119,14 +68,14 @@ static AddressStore *store;
                   {
                       if (!error)
                       {
-                          int statusCode = ((NSHTTPURLResponse *) response).statusCode;
-                          if (statusCode == 200)
+                          NSInteger statusCode = ((NSHTTPURLResponse *) response).statusCode;
+                          if (statusCode == 201)
                           {
-                              AddressModel *address = [[AddressModel alloc] initWithJson:data];
-                              if (address)
+                              AddressModel *model = [[AddressModel alloc] initWithJson:data];
+                              if (model)
                               {
-                                  [store.addresses addObject:address];
-                                  success(address);
+                                  [store.addresses addObject:model];
+                                  success(model);
                               }
                               else
                               {

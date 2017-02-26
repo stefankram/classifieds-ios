@@ -7,14 +7,14 @@
 
 @interface AddressModel : NSObject
 
-@property (nonatomic) unsigned long addressId;
+@property (nonatomic, copy) NSNumber *addressId;
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, copy) NSString *country;
 @property (nonatomic, copy) NSString *postalCode;
 @property (nonatomic, copy) NSString *province;
 @property (nonatomic, copy) NSString *street;
 
-- (instancetype) initWithAddressId:(unsigned long) addressId
+- (instancetype) initWithAddressId:(NSNumber *) addressId
                               city:(NSString *) city
                            country:(NSString *) country
                         postalCode:(NSString *) postalCode
